@@ -8,8 +8,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
 import { rhythm } from "../utils/typography"
+import styled from "styled-components"
+
+const SocialContainer = styled.aside`
+  display: flex;
+  justify-content: space-around;
+`
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -26,6 +31,7 @@ const Bio = () => {
           author
           social {
             twitter
+            github
           }
         }
       }
@@ -53,13 +59,16 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in Orlando, FL.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
-      </p>
+      <section>
+        <p>
+          Written by <strong>{author}</strong> who lives and works in Orlando,
+          FL.
+        </p>
+        <SocialContainer>
+          <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>
+          <a href={`https://github.com/${social.github}`}>GitHub</a>
+        </SocialContainer>
+      </section>
     </div>
   )
 }
