@@ -25,7 +25,12 @@ const routerData = [
 
 export default props => {
   const links = routerData.map(({ label, path }) => (
-    <Link style={{ boxShadow: `none` }} to={path} key={path}>
+    <Link
+      style={{ boxShadow: `none` }}
+      activeStyle={{ color: "red" }}
+      to={path}
+      key={path}
+    >
       {label}
     </Link>
   ))

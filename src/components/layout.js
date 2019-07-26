@@ -54,6 +54,7 @@ class Layout extends React.Component {
     }
     return (
       <div
+        className="site"
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
@@ -63,8 +64,8 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <Navegation />
-        <main>{children}</main>
-        <footer>
+        <main className="site-content">{children}</main>
+        <footer className={"footer"}>
           <Bio />
         </footer>
       </div>
