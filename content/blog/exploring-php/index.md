@@ -1,6 +1,6 @@
 ---
 title: Exploring PHP
-date: "2019-07-08T19:09:54.174Z"
+date: "2019-07-27T19:09:54.174Z"
 description: In this series we dive into the basics of PHP.
 ---
 
@@ -14,6 +14,18 @@ as Laravel.
 ### First things first.
 
 Lets make sure we have PHP up and running.
+
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [`gatsby-remark-prismjs`],
+    },
+  },
+]
+```
 
 <!-- Running PHP with docker -->
 
