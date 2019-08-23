@@ -37,6 +37,12 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
+    "babel-loader": "^8.0.6",
     "gh-pages": "^2.0.1",
     "prettier": "^1.18.2"
   },
@@ -57,6 +63,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "storybook": "NODE_ENV=production start-storybook -s public",
+    "build-storybook": "NODE_ENV=production build-storybook -s public"
   }
 }
