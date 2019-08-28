@@ -43,10 +43,11 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
+        justifyContent: `center`,
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
+      {/* <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
@@ -58,7 +59,7 @@ const Bio = () => {
         imgStyle={{
           borderRadius: `50%`,
         }}
-      />
+      /> */}
       <section>
         <p>
           Written by <strong>{author}</strong> who lives and works in Orlando,
